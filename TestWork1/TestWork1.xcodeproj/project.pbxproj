@@ -19,6 +19,7 @@
 		D7A2C98D2BF7A86E007673DC /* ContinueButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2C98C2BF7A86E007673DC /* ContinueButtonStyle.swift */; };
 		D7A2C98F2BF7DBE7007673DC /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2C98E2BF7DBE7007673DC /* ButtonStyles.swift */; };
 		D7A2C9912BF7DC56007673DC /* PriceButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2C9902BF7DC56007673DC /* PriceButtonStyle.swift */; };
+		D7A2C9952BFA58E1007673DC /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2C9942BFA58E1007673DC /* SecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		D7A2C98C2BF7A86E007673DC /* ContinueButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButtonStyle.swift; sourceTree = "<group>"; };
 		D7A2C98E2BF7DBE7007673DC /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		D7A2C9902BF7DC56007673DC /* PriceButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceButtonStyle.swift; sourceTree = "<group>"; };
+		D7A2C9942BFA58E1007673DC /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +73,8 @@
 				D7A2C98B2BF7A863007673DC /* Styles */,
 				D7A2C9862BF7A41E007673DC /* Extensions */,
 				D7A2C9832BF7A3DD007673DC /* Constants */,
-				D729EA3E2BEDFD1A00ED2A99 /* ContentView.swift */,
-				D729EA4A2BEDFDC600ED2A99 /* FirstView.swift */,
-				D7A2C9892BF7A82A007673DC /* StaticUI.swift */,
+				D7A2C9922BFA5886007673DC /* Screens */,
+				D7A2C9932BFA58B4007673DC /* Subviews */,
 				D729EA402BEDFD2300ED2A99 /* Assets.xcassets */,
 				D729EA422BEDFD2300ED2A99 /* Preview Content */,
 			);
@@ -113,6 +114,24 @@
 				D7A2C9902BF7DC56007673DC /* PriceButtonStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		D7A2C9922BFA5886007673DC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D729EA3E2BEDFD1A00ED2A99 /* ContentView.swift */,
+				D729EA4A2BEDFDC600ED2A99 /* FirstView.swift */,
+				D7A2C9942BFA58E1007673DC /* SecondView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D7A2C9932BFA58B4007673DC /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				D7A2C9892BF7A82A007673DC /* StaticUI.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +209,7 @@
 				D729EA4D2BEE01DF00ED2A99 /* Colors.swift in Sources */,
 				D7A2C9882BF7A44C007673DC /* StringProtocolExt.swift in Sources */,
 				D7A2C98F2BF7DBE7007673DC /* ButtonStyles.swift in Sources */,
+				D7A2C9952BFA58E1007673DC /* SecondView.swift in Sources */,
 				D729EA4B2BEDFDC600ED2A99 /* FirstView.swift in Sources */,
 				D7A2C98A2BF7A82A007673DC /* StaticUI.swift in Sources */,
 				D7A2C9912BF7DC56007673DC /* PriceButtonStyle.swift in Sources */,

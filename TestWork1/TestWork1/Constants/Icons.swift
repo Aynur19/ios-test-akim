@@ -9,6 +9,7 @@ import SwiftUI
 
 enum Icons: String {
     case background1
+    case background2
     
     case cross
     

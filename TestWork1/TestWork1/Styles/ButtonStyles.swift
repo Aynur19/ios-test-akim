@@ -9,8 +9,11 @@ import SwiftUI
 
 enum ButtonStyles {
     case continue1
+    case continue2
     case priceWeek1
+    case priceWeeks12
     case priceYear1
+    case priceMonths12
 }
 
 struct CustomButtonStyle: ButtonStyle {
@@ -26,10 +29,16 @@ struct CustomButtonStyle: ButtonStyle {
         switch style {
             case .continue1:
                 continueBtnStyle1.makeBody(configuration: configuration)
+            case .continue2:
+                continueBtnStyle2.makeBody(configuration: configuration)
             case .priceWeek1:
                 priceWeek1Style.makeBody(configuration: configuration)
+            case .priceWeeks12:
+                priceWeeks12Style.makeBody(configuration: configuration)
             case .priceYear1:
                 priceYear1Style.makeBody(configuration: configuration)
+            case .priceMonths12:
+                priceMonths12Style.makeBody(configuration: configuration)
         }
     }
 }
@@ -43,6 +52,14 @@ extension CustomButtonStyle {
         )
     }
     
+    private var continueBtnStyle2: some ButtonStyle {
+        ContinueButtonStyle(
+            background1: { Palette2.continueBtnBg.color },
+            background2: { Palette2.continueBtnBg.color },
+            cornerRadius: 8
+        )
+    }
+    
     private var continueBtn1Bg1: LinearGradient {
         .init(
             colors: [
@@ -53,7 +70,7 @@ extension CustomButtonStyle {
             endPoint: .bottom
         )
     }
-
+    
     private var continueBtn1Bg2: LinearGradient {
         .init(
             colors: [
@@ -77,10 +94,30 @@ extension CustomButtonStyle {
         )
     }
     
+    private var priceWeeks12Style: some ButtonStyle {
+        PriceButtonStyle(
+            background: { Palette2.priceWeeks12BtnBg.color },
+            border: { Palette2.priceWeeks12BtnBorder.color },
+            cornerRadius: 8,
+            borderWidth: 1,
+            isBestChoise: false
+        )
+    }
+    
     private var priceYear1Style: some ButtonStyle {
         PriceButtonStyle(
             background: { Palette1.priceYear1BtnBg.color },
             border: { Palette1.priceYear1BtnBorder.color },
+            cornerRadius: 8,
+            borderWidth: 2,
+            isBestChoise: true
+        )
+    }
+    
+    private var priceMonths12Style: some ButtonStyle {
+        PriceButtonStyle(
+            background: { Palette2.priceMonths12BtnBg.color },
+            border: { Palette2.priceMonths12BtnBorder.color },
             cornerRadius: 8,
             borderWidth: 2,
             isBestChoise: true

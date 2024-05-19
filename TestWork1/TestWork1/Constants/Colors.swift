@@ -37,3 +37,27 @@ enum Palette1: String {
     
     private var colorName: String { "Palette1/\(self.rawValue.kUppercased())"}
 }
+
+
+enum Palette2: String {
+    // MARK: Background
+    case background
+    
+    // MARK: Buttons
+    case continueBtnBg
+    case priceMonths12BtnBg
+    case priceMonths12BtnBorder
+    case priceWeeks12BtnBg
+    case priceWeeks12BtnBorder
+    
+    // MARK: Labels
+    case continueBtnLabel
+    case darkGrayLabel
+    case primaryLabel
+    case primaryLabel2
+    case secondaryLabel
+    
+    var color: Color { .init(colorName) }
+    
+    private var colorName: String { "Palette2/\(self.rawValue.kUppercased())"}
+}

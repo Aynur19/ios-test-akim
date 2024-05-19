@@ -18,13 +18,11 @@ struct FirstView: View {
             backgroundGradient.ignoresSafeArea()
             
             VStack(spacing: .zero) {
-                crossBtn
+                StaticUI.crossBtn(isLeft: false) { }
                 Spacer()
                 product
-//                Spacer()
-                
-                
             }
+            .padding(.horizontal, 20)
                 
         }
         .foregroundStyle(Colors.primaryLabel.color)
@@ -43,15 +41,6 @@ struct FirstView: View {
         )
     }
     
-    private var crossBtn: some View {
-        HStack {
-            Spacer()
-            StaticUI.crossBtn { }
-        }
-        .padding(.trailing, 20)
-        .padding(.top, 58)
-    }
-    
     private var product: some View {
         VStack(spacing: 12) {
             premiumFeatures
@@ -62,7 +51,6 @@ struct FirstView: View {
                 bottomBtns
             }
         }
-        .padding(.horizontal, 20)
         .padding(.bottom, 16)
     }
     
