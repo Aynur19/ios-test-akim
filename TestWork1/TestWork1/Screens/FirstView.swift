@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FirstView: View {
+    @EnvironmentObject private var coordinator: Coordinator
     typealias Colors = Palette1
     
     var body: some View {
@@ -18,7 +19,7 @@ struct FirstView: View {
             backgroundGradient.ignoresSafeArea()
             
             VStack(spacing: .zero) {
-                StaticUI.crossBtn(isLeft: false) { }
+                StaticUI.crossBtn(isLeft: false) { coordinator.pop() }
                 Spacer()
                 product
             }
@@ -178,9 +179,6 @@ struct FirstView: View {
             .padding(.vertical, 12)
     }
 }
-
-
-
 
 #Preview {
     FirstView()

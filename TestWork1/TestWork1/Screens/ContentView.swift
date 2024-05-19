@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var coordinator = Coordinator()
+    let rootPage: Page
+    
+    init(_ rootPage: Page = .empty) {
+        self.rootPage = rootPage
+    }
+    
     var body: some View {
-        TabView {
-//            FirstView()
-//                .tabItem {
-//                    Text("Terms")
-//                }
+        NavigationStack(path: $coordinator.path) {
+            coordinator.build(page: rootPage)
+                .navigationBarBackButtonHidden()
+                .navigationDestination(for: Page.self) {
+                    coordinator.build(page: $0)
+                        .navigationBarBackButtonHidden()
+                }
         }
-        .ignoresSafeArea()
+        .environmentObject(coordinator)
     }
 }
 

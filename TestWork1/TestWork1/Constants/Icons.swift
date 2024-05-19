@@ -19,4 +19,3 @@ enum Icons: String {
     
     var image: Image { .init(self.rawValue.kUppercased()) }
 }
-

@@ -10,13 +10,15 @@ import SwiftUI
 struct SecondView: View {
     typealias Colors = Palette2
     
+    @EnvironmentObject private var coordinator: Coordinator
+    
     var body: some View {
         ZStack {
             Colors.background.color
                 .ignoresSafeArea()
             
             VStack(spacing: .zero) {
-                StaticUI.crossBtn(isLeft: true) { }
+                StaticUI.crossBtn(isLeft: true) { coordinator.pop() }
                 
                 Icons.background2.image
                     .resizable()
